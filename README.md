@@ -44,8 +44,8 @@ litellm-gateway-landing/
 
 **Your Name**
 
-- LinkedIn: [Your Profile](https://linkedin.com/in/dvampofo)
-- GitHub: [@your-username](https://github.com/dvampofo)
+- LinkedIn: [David Ampofo](https://linkedin.com/in/dvampofo)
+- GitHub: [@dvampofo](https://github.com/dvampofo)
 
 ## 🙏 Acknowledgments
 
