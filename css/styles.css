@@ -292,8 +292,10 @@ h4 {
 }
 
 /* ===================================
-   Screenshot Images
+   Screenshot Images & Placeholders
    =================================== */
+
+/* Main screenshot image styling */
 .screenshot-image {
   width: 100%;
   min-height: 400px;
@@ -303,6 +305,7 @@ h4 {
   border: 2px solid var(--clr-surface-a30);
   background-color: var(--clr-surface-a20);
   transition: all 0.3s ease;
+  display: block;
 }
 
 .screenshot-image:hover {
@@ -311,7 +314,28 @@ h4 {
   transform: translateY(-5px);
 }
 
-/* Keep placeholder for areas without images yet */
+/* Smaller images for side-by-side layouts */
+.col-md-6 .screenshot-image {
+  min-height: 350px;
+  max-height: 400px;
+}
+
+/* Larger images for full-width sections */
+.col-12 .screenshot-image {
+  min-height: 450px;
+  max-height: 600px;
+}
+
+/* Architecture diagram specific styling (usually wider) */
+#tech .screenshot-image {
+  min-height: 400px;
+  max-height: 550px;
+  object-fit: contain; /* Use contain for diagrams to show full image */
+  background-color: var(--clr-surface-a10);
+  padding: 2rem;
+}
+
+/* Keep placeholder styling for any remaining placeholders */
 .screenshot-placeholder {
   background-color: var(--clr-surface-a20);
   border: 2px dashed var(--clr-surface-a30);
@@ -329,6 +353,64 @@ h4 {
 .screenshot-placeholder:hover {
   border-color: var(--clr-primary-a20);
   background-color: var(--clr-surface-tonal-a10);
+}
+
+/* ===================================
+   Responsive Adjustments
+   =================================== */
+
+@media (max-width: 992px) {
+  .screenshot-image {
+    min-height: 300px;
+    max-height: 400px;
+  }
+
+  .col-md-6 .screenshot-image {
+    min-height: 280px;
+    max-height: 350px;
+  }
+
+  #tech .screenshot-image {
+    min-height: 300px;
+    max-height: 450px;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .screenshot-image {
+    min-height: 250px;
+    max-height: 350px;
+  }
+
+  .col-md-6 .screenshot-image {
+    min-height: 250px;
+    max-height: 300px;
+    margin-bottom: 1rem;
+  }
+
+  .col-12 .screenshot-image {
+    min-height: 250px;
+    max-height: 400px;
+  }
+
+  #tech .screenshot-image {
+    min-height: 250px;
+    max-height: 350px;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .screenshot-image {
+    min-height: 200px;
+    max-height: 300px;
+  }
+
+  .col-md-6 .screenshot-image {
+    min-height: 200px;
+    max-height: 250px;
+  }
 }
 
 /* ===================================
