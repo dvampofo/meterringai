@@ -4,9 +4,10 @@ A responsive landing page for the LiteLLM Gateway project - an AI gateway that t
 
 ## 🚀 Live Demo
 
-[View Live Site](https://your-username.github.io/litellm-gateway-landing/)
+[View Live Site](https://dvampofo.github.io/litellmgatewaylanding/)
 
 ## 📁 Project Structure
+
 ```
 litellm-gateway-landing/
 ├── index.html          # Main HTML file
@@ -42,6 +43,7 @@ litellm-gateway-landing/
 ## 👤 Author
 
 **Your Name**
+
 - LinkedIn: [Your Profile](https://linkedin.com/in/dvampofo)
 - GitHub: [@your-username](https://github.com/dvampofo)
 
@@ -50,4 +52,7 @@ litellm-gateway-landing/
 - Built with [Bootstrap](https://getbootstrap.com/)
 - Fonts from [Google Fonts](https://fonts.google.com/)
 - Color palette from [Colorffy](https://colorffy.com/)
+
+```
+
 ```
