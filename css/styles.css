@@ -294,6 +294,13 @@ h4 {
 /* ===================================
    Screenshot Placeholder
    =================================== */
+.screenshot-placeholder .screenshot-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
 .screenshot-placeholder {
   background-color: var(--clr-surface-a20);
   background-image: url("/images/dashboard1.png");
