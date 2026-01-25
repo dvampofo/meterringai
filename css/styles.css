@@ -176,8 +176,8 @@ body {
 
 /* Hero screenshot styling */
 .hero .screenshot-image {
-  min-height: 950px;
-  max-height: 600px;
+  min-height: 450px;
+  max-height: 1200px;
   object-fit: contain;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
 }
