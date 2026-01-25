@@ -209,7 +209,7 @@ body {
 /* Desktop */
 @media (min-width: 992px) and (max-width: 1399px) {
   .hero {
-    min-height: 90vh;
+    min-height: 100vh;
     padding: 8rem 0 4rem 0;
   }
 }
