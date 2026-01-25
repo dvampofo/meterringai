@@ -209,7 +209,7 @@ body {
 /* Desktop */
 @media (min-width: 992px) and (max-width: 1399px) {
   .hero {
-    min-height: 100vh;
+    min-height: 90vh;
     padding: 8rem 0 4rem 0;
   }
 }
@@ -232,7 +232,7 @@ body {
   }
 
   .hero .screenshot-image {
-    min-height: 350px;
+    min-height: 950px;
     max-height: 450px;
   }
 }
