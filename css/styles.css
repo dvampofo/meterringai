@@ -665,3 +665,151 @@ button:focus {
     transform: rotate(90deg);
   }
 }
+
+/* ===================================
+   Popular LLMs Section
+   =================================== */
+
+#llms {
+  background-color: var(--clr-surface-a0);
+  padding: 5rem 0;
+}
+
+.llm-section-subtitle {
+  font-size: 0.875rem;
+  color: var(--clr-surface-a50);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.llm-section-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--clr-light-a0);
+  margin-bottom: 0;
+}
+
+/* LLM Cards */
+.llm-card {
+  background-color: var(--clr-surface-tonal-a10);
+  border: 1px solid var(--clr-surface-a20);
+  border-radius: 12px;
+  padding: 1.5rem;
+  height: 100%;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.llm-card:hover {
+  border-color: var(--clr-surface-a30);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.llm-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.llm-icon-placeholder {
+  width: 48px;
+  height: 48px;
+  background-color: var(--clr-surface-a20);
+  border: 1px solid var(--clr-surface-a30);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.llm-bookmark {
+  background: transparent;
+  border: none;
+  color: var(--clr-surface-a40);
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+}
+
+.llm-bookmark:hover {
+  background-color: var(--clr-surface-a20);
+  color: var(--clr-primary-a30);
+}
+
+.llm-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--clr-light-a0);
+  margin-bottom: 0.5rem;
+}
+
+.llm-card-description {
+  font-size: 0.9rem;
+  color: var(--clr-surface-a50);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  min-height: 2.7em;
+}
+
+.llm-card-stats {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--clr-surface-a40);
+  font-size: 0.875rem;
+}
+
+.llm-card-stats svg {
+  color: var(--clr-surface-a40);
+}
+
+.llm-card-stats span {
+  font-weight: 500;
+}
+
+/* ===================================
+   LLM Section Responsive
+   =================================== */
+
+@media (max-width: 991px) {
+  .llm-section-title {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #llms {
+    padding: 4rem 0;
+  }
+
+  .llm-section-title {
+    font-size: 2.5rem;
+  }
+
+  .llm-card {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .llm-section-title {
+    font-size: 2rem;
+  }
+
+  .llm-icon-placeholder {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .llm-card-title {
+    font-size: 1.125rem;
+  }
+}
