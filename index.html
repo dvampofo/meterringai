@@ -1,369 +1,349 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="AI gateway that turns bloated subscriptions into lean, usage-based billing. Pay for what you use, not what you might."
-    />
-    <title>LiteLLM Gateway - Pay-As-You-Go AI</title>
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="AI gateway that turns bloated subscriptions into lean, usage-based billing. Pay for what you use, not what you might." />
+  <title>LiteLLM Gateway - Pay-As-You-Go AI</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-      <div class="container">
-        <a class="navbar-brand" href="#home">LiteLLM Gateway</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#problem">Problem</a>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">LiteLLM Gateway</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#problem">Problem</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#solution">Solution</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#features">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tech">Tech Stack</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <h1>"Pay for what you use. Not what you might."</h1>
+          <p class="lead">
+            I built an AI gateway that turns bloated subscriptions into lean,
+            usage-based billing.
+          </p>
+          <div class="d-flex gap-3 flex-wrap">
+            <button class="btn-primary-custom" data-scroll="#solution">
+              See How It Works
+            </button>
+            <button class="btn-secondary-custom" data-scroll="#contact">
+              Get in Touch
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-5 mt-5 mt-lg-0">
+          <img src="images/dashboard1.png" alt="LiteLLM Dashboard Screenshot" class="screenshot-image">
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Problem Section -->
+  <section id="problem">
+    <div class="container">
+      <h2 class="text-center mb-5">The Problem I'm Solving</h2>
+      <div class="row">
+        <div class="col-12">
+          <div class="comparison-card">
+            <h3>❌ The Subscription Trap</h3>
+            <p class="lead">Companies pay thousands per month for enterprise AI subscriptions with every feature
+              imaginable.</p>
+            <p><strong>Reality?</strong> Teams use maybe 5-10% of that capacity. The rest? Pure waste.</p>
+            <p class="mt-3">It's like paying for an unlimited gym membership when you only go twice a month.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <img src="images/cost-comparison.png" alt="Cost Comparison Chart showing subscription vs usage-based pricing"
+            class="screenshot-image">
+        </div>
+        <div class="col-md-6">
+          <img src="images/usage-analytics.png" alt="Usage Analytics Dashboard" class="screenshot-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution Section -->
+  <section id="solution" class="section-dark">
+    <div class="container">
+      <h2 class="text-center mb-5">My Solution</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="comparison-card solution">
+            <h3>✅ Usage-Based AI Gateway</h3>
+            <p class="lead">
+              I route AI requests through LiteLLM as a metering layer. You pay
+              for actual tokens consumed, not theoretical capacity you'll
+              never touch.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-lg-6 mb-4">
+          <h3>The Shift I'm Enabling</h3>
+          <ul class="feature-list">
+            <li>
+              <strong>❌ Subscription model:</strong> Pay for everything, use
+              5%
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#solution">Solution</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#features">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#tech">Tech Stack</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
+            <li>
+              <strong>✅ Consumption model:</strong> Pay for the 5% you
+              actually use
             </li>
           </ul>
         </div>
+        <div class="col-lg-6">
+          <img src="images/model-routing.png" alt="Model Routing Architecture Diagram" class="screenshot-image">
+        </div>
       </div>
-    </nav>
+    </div>
+  </section>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-7">
-            <h1>"Pay for what you use. Not what you might."</h1>
-            <p class="lead">
-              I built an AI gateway that turns bloated subscriptions into lean,
-              usage-based billing.
+  <!-- Features Section -->
+  <section id="features">
+    <div class="container">
+      <h2 class="text-center mb-5">What I Built</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h4>LiteLLM Proxy</h4>
+            <p>
+              The cost meter that tracks every single token consumed across
+              your organization.
             </p>
-            <div class="d-flex gap-3 flex-wrap">
-              <button class="btn-primary-custom" data-scroll="#solution">
-                See How It Works
-              </button>
-              <button class="btn-secondary-custom" data-scroll="#contact">
-                Get in Touch
-              </button>
-            </div>
-          </div>
-          <div class="col-lg-5 mt-5 mt-lg-0">
-            <img src="images/dashboard1.png" alt="LiteLLM Dashboard Screenshot" class="screenshot-image">
-            </div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Problem Section -->
-    <section id="problem">
-      <div class="container">
-        <h2 class="text-center mb-5">The Problem I'm Solving</h2>
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="comparison-card">
-              <h3>❌ The Subscription Trap</h3>
-              <p class="lead">
-                Companies pay thousands per month for enterprise AI
-                subscriptions with every feature imaginable.
-              </p>
-              <p>
-                <strong>Reality?</strong> Teams use maybe 5-10% of that
-                capacity. The rest? Pure waste.
-              </p>
-              <p class="mt-3">
-                It's like paying for an unlimited gym membership when you only
-                go twice a month.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="row mt-4">
-          <div class="col-md-6">
-            <img src="images/cost-comparison.png" alt="Cost Comparison Chart showing subscription vs usage-based pricing" class="screenshot-image">
-          </div>
-          <div class="col-md-6">
-            <img src="images/usage-analytics.png" alt="Usage Analytics Dashboard" class="screenshot-image">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Solution Section -->
-    <section id="solution" class="section-dark">
-      <div class="container">
-        <h2 class="text-center mb-5">My Solution</h2>
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="comparison-card solution">
-              <h3>✅ Usage-Based AI Gateway</h3>
-              <p class="lead">
-                I route AI requests through LiteLLM as a metering layer. You pay
-                for actual tokens consumed, not theoretical capacity you'll
-                never touch.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="row mt-5">
-          <div class="col-lg-6 mb-4">
-            <h3>The Shift I'm Enabling</h3>
-            <ul class="feature-list">
-              <li>
-                <strong>❌ Subscription model:</strong> Pay for everything, use
-                5%
-              </li>
-              <li>
-                <strong>✅ Consumption model:</strong> Pay for the 5% you
-                actually use
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-6">
-            <img src="images/model-routing.png" alt="Model Routing Architecture Diagram" class="screenshot-image">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features">
-      <div class="container">
-        <h2 class="text-center mb-5">What I Built</h2>
-        <div class="row g-4">
-          <div class="col-md-6 col-lg-4">
-            <div class="feature-card">
-              <div class="feature-icon">📊</div>
-              <h4>LiteLLM Proxy</h4>
-              <p>
-                The cost meter that tracks every single token consumed across
-                your organization.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <div class="feature-card">
-              <div class="feature-icon">🆓</div>
-              <h4>Local Ollama Models</h4>
-              <p>
-                Free AI for development and testing. No costs during the build
-                phase.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <div class="feature-card">
-              <div class="feature-icon">📦</div>
-              <h4>Docker Containerization</h4>
-              <p>
-                Portable setup that runs anywhere. Easy deployment and scaling.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <div class="feature-card">
-              <div class="feature-icon">🔐</div>
-              <h4>ngrok Tunnel</h4>
-              <p>
-                Secure external access without complex networking or firewall
-                configurations.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <div class="feature-card">
-              <div class="feature-icon">💰</div>
-              <h4>Budget Caps</h4>
-              <p>
-                Per-user budget limits and real-time usage tracking. Never go
-                over budget.
-              </p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <div class="feature-card">
-              <div class="feature-icon">⚡</div>
-              <h4>Smart Routing</h4>
-              <p>
-                Automatically route to free models for dev, paid APIs for
-                production.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row mt-5">
-          <div class="col-12">
-            <h3 class="mb-4">How It Works</h3>
-            <p class="lead">
-              Instead of enterprise contracts with seats you don't fill and
-              features you don't use, developers hit my LiteLLM gateway. I can
-              set:
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon">🆓</div>
+            <h4>Local Ollama Models</h4>
+            <p>
+              Free AI for development and testing. No costs during the build
+              phase.
             </p>
-            <ul class="feature-list">
-              <li>Budget limits per user/team</li>
-              <li>Rate controls (prevent runaway usage)</li>
-              <li>
-                Model routing (free local models → paid APIs only when needed)
-              </li>
-              <li>Real-time spend tracking</li>
-            </ul>
           </div>
         </div>
-
-        <div class="row mt-4">
-          <div class="col-12">
-            <img src="images/feature-demo.png" alt="LiteLLM Gateway Feature Demonstration" class="screenshot-image">
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon">📦</div>
+            <h4>Docker Containerization</h4>
+            <p>
+              Portable setup that runs anywhere. Easy deployment and scaling.
+            </p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Tech Stack Section -->
-    <section id="tech" class="section-dark">
-      <div class="container">
-        <h2 class="text-center mb-5">Tech Stack Flow</h2>
-        <div class="tech-stack">
-          <div
-            class="d-flex flex-wrap justify-content-center align-items-center"
-          >
-            <div class="p-3">
-              <h4>External Request</h4>
-            </div>
-            <span class="tech-arrow">→</span>
-            <div class="p-3">
-              <h4>ngrok</h4>
-            </div>
-            <span class="tech-arrow">→</span>
-            <div class="p-3">
-              <h4>LiteLLM</h4>
-            </div>
-            <span class="tech-arrow">→</span>
-            <div class="p-3">
-              <h4>Ollama</h4>
-            </div>
-            <span class="tech-arrow">→</span>
-            <div class="p-3">
-              <h4>Local Models</h4>
-            </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon">🔐</div>
+            <h4>ngrok Tunnel</h4>
+            <p>
+              Secure external access without complex networking or firewall
+              configurations.
+            </p>
           </div>
         </div>
-        <div class="row mt-5">
-          <div class="col-12">
-            <img src="images/architecture.png" alt="Complete LiteLLM Gateway Architecture Diagram" class="screenshot-image">
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon">💰</div>
+            <h4>Budget Caps</h4>
+            <p>
+              Per-user budget limits and real-time usage tracking. Never go
+              over budget.
+            </p>
           </div>
         </div>
-        <div class="row mt-4">
-          <div class="col-lg-6 mx-auto text-center">
-            <p class="lead">
-              I route to FREE local models (Ollama) during development. Then
-              switch to paid APIs (OpenAI, Anthropic) only for production
-              workloads. Every request tracked. Every dollar accounted for.
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h4>Smart Routing</h4>
+            <p>
+              Automatically route to free models for dev, paid APIs for
+              production.
             </p>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-      <div class="container">
-        <h2 class="mb-4">This is AI as a utility, not a subscription trap</h2>
-        <p class="mb-4">Intelligence on-demand. Invoices based on reality.</p>
-        <p class="mb-5">
-          If you're tired of paying for AI capacity gathering dust, this
-          architecture is worth exploring.
-        </p>
-        <button class="btn-primary-custom" data-scroll="#contact">
-          Get the Technical Breakdown
-        </button>
+      <div class="row mt-5">
+        <div class="col-12">
+          <h3 class="mb-4">How It Works</h3>
+          <p class="lead">
+            Instead of enterprise contracts with seats you don't fill and
+            features you don't use, developers hit my LiteLLM gateway. I can
+            set:
+          </p>
+          <ul class="feature-list">
+            <li>Budget limits per user/team</li>
+            <li>Rate controls (prevent runaway usage)</li>
+            <li>
+              Model routing (free local models → paid APIs only when needed)
+            </li>
+            <li>Real-time spend tracking</li>
+          </ul>
+        </div>
       </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-6 text-center">
-            <h2 class="mb-4">Let's Connect</h2>
-            <p class="lead mb-4">
-              Interested in implementing usage-based AI for your organization?
-            </p>
-            <p class="mb-4">
-              DM me for the complete technical breakdown and implementation
-              guide.
-            </p>
-            <div class="d-flex gap-3 justify-content-center flex-wrap">
-              <button class="btn-primary-custom" id="linkedinBtn">
-                Connect on LinkedIn
-              </button>
-              <button class="btn-secondary-custom" id="emailBtn">
-                Send Email
-              </button>
-            </div>
+      <div class="row mt-4">
+        <div class="col-12">
+          <img src="images/feature-demo.png" alt="LiteLLM Gateway Feature Demonstration" class="screenshot-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack Section -->
+  <section id="tech" class="section-dark">
+    <div class="container">
+      <h2 class="text-center mb-5">Tech Stack Flow</h2>
+      <div class="tech-stack">
+        <div class="d-flex flex-wrap justify-content-center align-items-center">
+          <div class="p-3">
+            <h4>External Request</h4>
+          </div>
+          <span class="tech-arrow">→</span>
+          <div class="p-3">
+            <h4>ngrok</h4>
+          </div>
+          <span class="tech-arrow">→</span>
+          <div class="p-3">
+            <h4>LiteLLM</h4>
+          </div>
+          <span class="tech-arrow">→</span>
+          <div class="p-3">
+            <h4>Ollama</h4>
+          </div>
+          <span class="tech-arrow">→</span>
+          <div class="p-3">
+            <h4>Local Models</h4>
           </div>
         </div>
       </div>
-    </section>
+      <div class="row mt-5">
+        <div class="col-12">
+          <img src="images/architecture.png" alt="Complete LiteLLM Gateway Architecture Diagram"
+            class="screenshot-image">
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-lg-6 mx-auto text-center">
+          <p class="lead">
+            I route to FREE local models (Ollama) during development. Then
+            switch to paid APIs (OpenAI, Anthropic) only for production
+            workloads. Every request tracked. Every dollar accounted for.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <h4>LiteLLM Gateway</h4>
-            <p class="text-muted">Pay for what you use. Not what you might.</p>
-          </div>
-          <div class="col-md-6 text-md-end">
-            <p class="text-muted">
-              &copy; 2026 LiteLLM Gateway Project. Built with passion for cost
-              optimization.
-            </p>
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="mb-4">This is AI as a utility, not a subscription trap</h2>
+      <p class="mb-4">Intelligence on-demand. Invoices based on reality.</p>
+      <p class="mb-5">
+        If you're tired of paying for AI capacity gathering dust, this
+        architecture is worth exploring.
+      </p>
+      <button class="btn-primary-custom" data-scroll="#contact">
+        Get the Technical Breakdown
+      </button>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 text-center">
+          <h2 class="mb-4">Let's Connect</h2>
+          <p class="lead mb-4">
+            Interested in implementing usage-based AI for your organization?
+          </p>
+          <p class="mb-4">
+            DM me for the complete technical breakdown and implementation
+            guide.
+          </p>
+          <div class="d-flex gap-3 justify-content-center flex-wrap">
+            <button class="btn-primary-custom" id="linkedinBtn">
+              Connect on LinkedIn
+            </button>
+            <button class="btn-secondary-custom" id="emailBtn">
+              Send Email
+            </button>
           </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </section>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h4>LiteLLM Gateway</h4>
+          <p class="text-muted">Pay for what you use. Not what you might.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p class="text-muted">
+            &copy; 2026 LiteLLM Gateway Project. Built with passion for cost
+            optimization.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-    <!-- Custom JS -->
-    <script src="js/main.js"></script>
-  </body>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+</body>
+
 </html>
