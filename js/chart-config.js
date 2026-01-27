@@ -4,6 +4,21 @@
  * Data: Cost per 1M tokens (Input)
  */
 
+// ===================================
+// COLOR CONFIGURATION - CUSTOMIZE HERE
+// ===================================
+// Change this to highlight your LiteLLM label with your preferred color
+const LITELLM_LABEL_COLOR = "#ffffff"; // Default: white
+
+// Other popular options:
+// "#ffd700" - Gold (premium feel)
+// "#00ff00" - Lime (neon green)
+// "#ff00ff" - Magenta (vibrant)
+// "#00ffff" - Cyan (tech/cool)
+// "#ffff00" - Yellow (high contrast)
+// "#4967bc" - Your primary blue
+// "#47d5a6" - Your success green
+
 document.addEventListener("DOMContentLoaded", function () {
   // ===================================
   // Chart.js Initialization
@@ -182,6 +197,42 @@ document.addEventListener("DOMContentLoaded", function () {
           },
         },
       },
+      plugins: [
+        {
+          // Custom plugin to highlight LiteLLM label with configurable color
+          afterDatasetsDraw(chart) {
+            const ctx = chart.ctx;
+            const xAxis = chart.scales.x;
+            const chartArea = chart.chartArea;
+
+            // LiteLLM is at index 11 (12th position, 0-indexed)
+            const litellmIndex = 11;
+
+            // Get x position of the LiteLLM label
+            const xPos = xAxis.getPixelForValue(litellmIndex);
+            const labelBottomY = chartArea.bottom + 10;
+
+            ctx.save();
+
+            // Draw subtle background highlight behind the label
+            ctx.fillStyle = "rgba(255, 255, 255, 0.08)";
+            ctx.fillRect(xPos - 50, labelBottomY - 5, 100, 65);
+
+            // Draw the LiteLLM label text with custom color (bold & eye-catching)
+            ctx.fillStyle = LITELLM_LABEL_COLOR;
+            ctx.font = 'bold 12px "Inter", sans-serif';
+            ctx.textAlign = "center";
+            ctx.textBaseline = "top";
+
+            // Draw label text
+            ctx.fillText("LiteLLM", xPos, labelBottomY + 15);
+            ctx.font = '11px "Inter", sans-serif'; // Slightly smaller for second line
+            ctx.fillText("Smart Routing", xPos, labelBottomY + 30);
+
+            ctx.restore();
+          },
+        },
+      ],
     });
   }
 });
