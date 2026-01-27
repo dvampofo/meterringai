@@ -465,11 +465,13 @@
   .dashboard-main-content {
     gap: 12px;
     margin-bottom: 18px;
+    grid-template-columns: 1fr; /* Ensure single column on mobile */
   }
 
   .dashboard-card {
     padding: 12px;
     border-radius: 10px;
+    width: 100%; /* Match the stat card width */
   }
 
   .dashboard-card-header {
