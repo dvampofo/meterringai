@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (linkedinBtn) {
     linkedinBtn.addEventListener("click", function () {
       // Replace with your actual LinkedIn profile URL
-      window.open("https://www.linkedin.com/in/your-profile", "_blank");
+      window.open("https://www.linkedin.com/in/dvampofo", "_blank");
     });
   }
 

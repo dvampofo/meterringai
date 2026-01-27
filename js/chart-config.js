@@ -8,7 +8,15 @@
 // COLOR CONFIGURATION - CUSTOMIZE HERE
 // ===================================
 const LITELLM_LABEL_COLOR = "#ffffff"; // Default: white
-// "#ffd700" - Gold, "#00ff00" - Lime, "#ff00ff" - Magenta, "#00ffff" - Cyan
+
+// Other popular options:
+// "#ffd700" - Gold (premium feel)
+// "#00ff00" - Lime (neon green)
+// "#ff00ff" - Magenta (vibrant)
+// "#00ffff" - Cyan (tech/cool)
+// "#ffff00" - Yellow (high contrast)
+// "#4967bc" - Your primary blue
+// "#47d5a6" - Your success green
 
 document.addEventListener("DOMContentLoaded", function () {
   const chartCanvas = document.getElementById("cost-comparison-chart");
@@ -67,11 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
       options: {
         maintainAspectRatio: false,
         responsive: true,
-        layout: {
-          padding: {
-            bottom: 80, // Add extra space at bottom for labels
-          },
-        },
         plugins: {
           title: {
             display: true,
@@ -154,12 +157,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 family: "'Inter', sans-serif",
                 size: 11,
               },
-              // Hide the default LiteLLM label - we'll draw it custom
-              callback: function (value, index) {
-                if (index === 11) {
-                  return ""; // Hide default, we draw custom
+              // USE COLOR CALLBACK TO CHANGE LITELLM LABEL COLOR
+              color: function (context) {
+                // If this is the last label (index 11 = LiteLLM)
+                if (context.index === 11) {
+                  return LITELLM_LABEL_COLOR; // Use custom color
                 }
-                return this.getLabelForValue(value);
+                // All other labels stay gray
+                return "#717171";
               },
             },
           },
@@ -196,56 +201,6 @@ document.addEventListener("DOMContentLoaded", function () {
           },
         },
       },
-      plugins: [
-        {
-          id: "litellmLabelPlugin",
-          afterDraw(chart) {
-            const ctx = chart.ctx;
-            const xScale = chart.scales.x;
-            const chartArea = chart.chartArea;
-
-            // Get canvas dimensions
-            const canvasWidth = chart.canvas.width;
-            const canvasHeight = chart.canvas.height;
-
-            // LiteLLM is at index 11
-            const litellmIndex = 11;
-            const xPos = xScale.getPixelForValue(litellmIndex);
-
-            // Position label below the chart area, with room to spare from edges
-            const labelY = chartArea.bottom + 35;
-
-            ctx.save();
-
-            // Clipping region - prevent drawing outside canvas
-            ctx.beginPath();
-            ctx.rect(
-              0,
-              chartArea.bottom,
-              canvasWidth,
-              canvasHeight - chartArea.bottom,
-            );
-            ctx.clip();
-
-            // Draw background highlight box (constrained to fit)
-            ctx.fillStyle = "rgba(255, 255, 255, 0.1)";
-            ctx.fillRect(Math.max(xPos - 50, 5), chartArea.bottom + 8, 100, 55);
-
-            // Draw "LiteLLM" text
-            ctx.fillStyle = LITELLM_LABEL_COLOR;
-            ctx.font = 'bold 12px "Inter", sans-serif';
-            ctx.textAlign = "center";
-            ctx.textBaseline = "top";
-            ctx.fillText("LiteLLM", xPos, labelY);
-
-            // Draw "Smart Routing" text
-            ctx.font = '11px "Inter", sans-serif';
-            ctx.fillText("Smart Routing", xPos, labelY + 15);
-
-            ctx.restore();
-          },
-        },
-      ],
     });
   }
 });
