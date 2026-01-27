@@ -86,7 +86,11 @@
 }
 
 .dashboard-stat-card {
-  background: linear-gradient(135deg, rgba(22, 27, 46, 0.8), rgba(22, 27, 46, 0.5));
+  background: linear-gradient(
+    135deg,
+    rgba(22, 27, 46, 0.8),
+    rgba(22, 27, 46, 0.5)
+  );
   border-radius: 12px;
   padding: 18px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
@@ -103,7 +107,7 @@
 }
 
 .dashboard-stat-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -126,7 +130,7 @@
   font-weight: 700;
   color: #47d5a6;
   margin-bottom: 8px;
-  font-family: 'Courier New', monospace;
+  font-family: "Courier New", monospace;
 }
 
 .dashboard-stat-change {
@@ -161,7 +165,11 @@
 
 /* Card Styling */
 .dashboard-card {
-  background: linear-gradient(135deg, rgba(22, 27, 46, 0.8), rgba(22, 27, 46, 0.5));
+  background: linear-gradient(
+    135deg,
+    rgba(22, 27, 46, 0.8),
+    rgba(22, 27, 46, 0.5)
+  );
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
@@ -202,10 +210,39 @@
 }
 
 /* Table Styling */
+.dashboard-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(73, 103, 188, 0.3) transparent;
+}
+
+/* Custom scrollbar styling */
+.dashboard-table-wrapper::-webkit-scrollbar {
+  height: 6px;
+}
+
+.dashboard-table-wrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dashboard-table-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(73, 103, 188, 0.3);
+  border-radius: 3px;
+  transition: background 0.3s ease;
+}
+
+.dashboard-table-wrapper::-webkit-scrollbar-thumb:hover {
+  background: rgba(73, 103, 188, 0.5);
+}
+
 .dashboard-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 13px;
+  min-width: 600px; /* Minimum width to enable scrolling on mobile */
 }
 
 .dashboard-table th {
@@ -216,12 +253,14 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  white-space: nowrap;
 }
 
 .dashboard-table td {
   padding: 12px 10px;
   border-bottom: 1px solid rgba(73, 103, 188, 0.1);
   color: #e2e8f0;
+  white-space: nowrap;
 }
 
 .dashboard-table tr:last-child td {
@@ -372,6 +411,7 @@
 
   .dashboard-table {
     font-size: 12px;
+    min-width: 550px;
   }
 
   .dashboard-table th,
@@ -379,19 +419,8 @@
     padding: 10px 8px;
   }
 
-  .dashboard-chart-container {
-    height: 240px;
-  }
-
-  .dashboard-crypto-icon {
-    width: 24px;
-    height: 24px;
-    font-size: 11px;
-  }
-
-  .dashboard-table th:nth-child(3),
-  .dashboard-table td:nth-child(3) {
-    display: none;
+  .dashboard-table-wrapper {
+    margin: 0 -12px; /* Extend to edges for full scroll */
   }
 }
 
@@ -478,6 +507,7 @@
 
   .dashboard-table {
     font-size: 11px;
+    min-width: 500px;
   }
 
   .dashboard-table th,
@@ -487,6 +517,11 @@
 
   .dashboard-table th {
     font-size: 10px;
+  }
+
+  .dashboard-table-wrapper {
+    margin: 0 -12px; /* Extend to card edges */
+    padding: 0 4px; /* Small padding inside scroll area */
   }
 
   .dashboard-chart-container {
