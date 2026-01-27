@@ -41,6 +41,9 @@
             <a class="nav-link" href="#features">Features</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="#pricing">Pricing</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#tech">Tech Stack</a>
           </li>
           <li class="nav-item">
@@ -207,74 +210,121 @@
           </div>
         </div>
       </div>
-
-      <div class="row mt-5">
-        <div class="col-12">
-          <h3 class="mb-4">How It Works</h3>
-          <p class="lead">
-            Instead of enterprise contracts with seats you don't fill and
-            features you don't use, developers hit my LiteLLM gateway. I can
-            set:
-          </p>
-          <ul class="feature-list">
-            <li>Budget limits per user/team</li>
-            <li>Rate controls (prevent runaway usage)</li>
-            <li>
-              Model routing (free local models → paid APIs only when needed)
-            </li>
-            <li>Real-time spend tracking</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="row mt-4">
-        <div class="col-12">
-          <img src="images/feature-demo.png" alt="LiteLLM Gateway Feature Demonstration" class="screenshot-image">
-        </div>
-      </div>
     </div>
   </section>
 
-  <!-- Tech Stack Section -->
-  <section id="tech" class="section-dark">
+  <!-- PRICING SECTION -->
+  <section id="pricing" class="pricing-section">
     <div class="container">
-      <h2 class="text-center mb-5">Tech Stack Flow</h2>
-      <div class="tech-stack">
-        <div class="d-flex flex-wrap justify-content-center align-items-center">
-          <div class="p-3">
-            <h4>External Request</h4>
-          </div>
-          <span class="tech-arrow">→</span>
-          <div class="p-3">
-            <h4>ngrok</h4>
-          </div>
-          <span class="tech-arrow">→</span>
-          <div class="p-3">
-            <h4>LiteLLM</h4>
-          </div>
-          <span class="tech-arrow">→</span>
-          <div class="p-3">
-            <h4>Ollama</h4>
-          </div>
-          <span class="tech-arrow">→</span>
-          <div class="p-3">
-            <h4>Local Models</h4>
+      <div class="pricing-header">
+        <h2 class="text-center mb-5">Simple, Transparent Pricing</h2>
+        
+        <!-- Billing Toggle -->
+        <div class="billing-toggle-container">
+          <div class="billing-toggle">
+            <button class="toggle-btn active" data-billing="monthly">
+              Monthly
+            </button>
+            <button class="toggle-btn" data-billing="yearly">
+              Yearly
+              <span class="save-badge">(Save 25%)</span>
+            </button>
           </div>
         </div>
       </div>
-      <div class="row mt-5">
-        <div class="col-12">
-          <img src="images/architecture.png" alt="Complete LiteLLM Gateway Architecture Diagram"
-            class="screenshot-image">
+
+      <!-- Pricing Cards Container -->
+      <div class="row g-4 pricing-cards-row">
+        <!-- Starter Card -->
+        <div class="col-md-6 col-lg-4">
+          <div class="pricing-card" data-plan="starter">
+            <h3 class="plan-name">STARTER</h3>
+
+            <div class="price-section">
+              <span class="price">$2000</span>
+              <span class="period">/month</span>
+            </div>
+
+            <p class="plan-description">Perfect for small teams looking to automate basic tasks.</p>
+
+            <div class="divider"></div>
+
+            <div class="features-section">
+              <h4 class="features-label">WHAT'S INCLUDED:</h4>
+              <ul class="features-list">
+                <li class="feature-item">2 Custom Workflows</li>
+                <li class="feature-item">Up to 3 Integrations</li>
+                <li class="feature-item">Email Support</li>
+                <li class="feature-item">Basic Dashboard Access</li>
+                <li class="feature-item">1 Revision Round</li>
+                <li class="feature-item">Pause or cancel anytime</li>
+              </ul>
+            </div>
+
+            <button class="pricing-cta-btn">GET STARTED</button>
+          </div>
         </div>
-      </div>
-      <div class="row mt-4">
-        <div class="col-lg-6 mx-auto text-center">
-          <p class="lead">
-            I route to FREE local models (Ollama) during development. Then
-            switch to paid APIs (OpenAI, Anthropic) only for production
-            workloads. Every request tracked. Every dollar accounted for.
-          </p>
+
+        <!-- Growth Card (Most Popular) -->
+        <div class="col-md-6 col-lg-4">
+          <div class="pricing-card pricing-card-featured" data-plan="growth">
+            <div class="card-badge">Most popular</div>
+
+            <h3 class="plan-name">GROWTH</h3>
+
+            <div class="price-section">
+              <span class="price">$2000</span>
+              <span class="period">/month</span>
+            </div>
+
+            <p class="plan-description">Ideal for growing businesses ready to automate key operations.</p>
+
+            <div class="divider"></div>
+
+            <div class="features-section">
+              <h4 class="features-label">WHAT'S INCLUDED:</h4>
+              <ul class="features-list">
+                <li class="feature-item">5–7 Custom Workflows</li>
+                <li class="feature-item">Up to 8 Integrations</li>
+                <li class="feature-item">Priority Email & Chat Support</li>
+                <li class="feature-item">Advanced Analytics Dashboard</li>
+                <li class="feature-item">Monthly Optimization</li>
+                <li class="feature-item">Pause or cancel anytime</li>
+              </ul>
+            </div>
+
+            <button class="pricing-cta-btn">GET STARTED</button>
+          </div>
+        </div>
+
+        <!-- Enterprise Card -->
+        <div class="col-md-6 col-lg-4">
+          <div class="pricing-card" data-plan="enterprise">
+            <h3 class="plan-name">ENTERPRISE</h3>
+
+            <div class="price-section">
+              <span class="price">$2000</span>
+              <span class="period">/month</span>
+            </div>
+
+            <p class="plan-description">Tailored solutions for companies with complex high-volume needs.</p>
+
+            <div class="divider"></div>
+
+            <div class="features-section">
+              <h4 class="features-label">WHAT'S INCLUDED:</h4>
+              <ul class="features-list">
+                <li class="feature-item">Unlimited Workflows</li>
+                <li class="feature-item">Custom API Integration</li>
+                <li class="feature-item">Dedicated Account Manager</li>
+                <li class="feature-item">Onboarding & Team Training</li>
+                <li class="feature-item">Real-Time Monitoring & Support</li>
+                <li class="feature-item">Pause or cancel anytime</li>
+              </ul>
+            </div>
+
+            <button class="pricing-cta-btn">GET STARTED</button>
+          </div>
         </div>
       </div>
     </div>
@@ -283,13 +333,14 @@
   <!-- Popular LLMs Section -->
   <section id="llms">
     <div class="container">
-      <div class="text-center mb-5">
-        <p class="llm-section-subtitle">Ollama Models</p>
-        <h2 class="llm-section-title">Start with your<br>favorite model.</h2>
+      <div class="row mb-5">
+        <div class="col-12">
+          <p class="llm-section-subtitle">Supported Models</p>
+          <h2 class="llm-section-title">Popular Open Source LLMs</h2>
+        </div>
       </div>
-
       <div class="row g-4">
-        <!-- Llama 3 -->
+        <!-- Llama 2 -->
         <div class="col-md-6 col-lg-4">
           <div class="llm-card">
             <div class="llm-card-header">
@@ -302,8 +353,8 @@
                 </svg>
               </button>
             </div>
-            <h4 class="llm-card-title">Llama 3</h4>
-            <p class="llm-card-description">Meta's most capable openly available LLM to date</p>
+            <h4 class="llm-card-title">Llama 2</h4>
+            <p class="llm-card-description">Meta's open-source LLM available in 7B, 13B, and 70B variants</p>
             <div class="llm-card-stats">
               <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
                 <path
@@ -441,6 +492,7 @@
       </div>
     </div>
   </section>
+
   <!-- CTA Section -->
   <section class="cta-section">
     <div class="container">
