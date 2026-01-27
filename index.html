@@ -21,6 +21,12 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/styles.css" />
+  
+  <!-- Dashboard CSS -->
+  <link rel="stylesheet" href="css/dashboard.css" />
+  
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
 <body>
@@ -195,6 +201,175 @@
           </div>
         </div>
       </div>
+
+      <!-- Dashboard Component -->
+      <div class="row mt-5 mb-5">
+        <div class="col-12">
+          <div class="dashboard-section">
+            <div class="dashboard-container">
+              <div class="dashboard-header">
+                <div class="dashboard-logo">
+                  <i class="fas fa-coins"></i>
+                  CryptoVision
+                </div>
+                <div class="dashboard-search-container">
+                  <i class="fas fa-search"></i>
+                  <input type="text" id="dashboard-search-input" placeholder="Search cryptocurrencies...">
+                </div>
+              </div>
+
+              <div class="dashboard-stats-grid">
+                <div class="dashboard-stat-card">
+                  <div class="dashboard-stat-title">Total Market Cap</div>
+                  <div class="dashboard-stat-value" id="market-cap">$2.36T</div>
+                  <div class="dashboard-stat-change dashboard-change-up">
+                    <i class="fas fa-arrow-up"></i> 3.24%
+                  </div>
+                </div>
+                <div class="dashboard-stat-card">
+                  <div class="dashboard-stat-title">24h Volume</div>
+                  <div class="dashboard-stat-value" id="total-volume">$86.54B</div>
+                  <div class="dashboard-stat-change dashboard-change-up">
+                    <i class="fas fa-arrow-up"></i> 5.67%
+                  </div>
+                </div>
+                <div class="dashboard-stat-card">
+                  <div class="dashboard-stat-title">Bitcoin Dominance</div>
+                  <div class="dashboard-stat-value" id="btc-dominance">46.8%</div>
+                  <div class="dashboard-stat-change dashboard-change-down">
+                    <i class="fas fa-arrow-down"></i> 1.32%
+                  </div>
+                </div>
+                <div class="dashboard-stat-card">
+                  <div class="dashboard-stat-title">Active Cryptocurrencies</div>
+                  <div class="dashboard-stat-value" id="active-cryptos">12,847</div>
+                  <div class="dashboard-stat-change dashboard-change-up">
+                    <i class="fas fa-arrow-up"></i> 0.84%
+                  </div>
+                </div>
+              </div>
+
+              <div class="dashboard-main-content">
+                <div class="dashboard-card">
+                  <div class="dashboard-card-header">
+                    <h2 class="dashboard-card-title">Top Cryptocurrencies</h2>
+                    <a href="#" class="dashboard-view-all">View All</a>
+                  </div>
+                  <div class="dashboard-card-content">
+                    <table class="dashboard-table">
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Price</th>
+                          <th>24h Change</th>
+                          <th>Market Cap</th>
+                        </tr>
+                      </thead>
+                      <tbody id="crypto-table-body">
+                        <tr>
+                          <td>
+                            <div class="dashboard-crypto-name">
+                              <div class="dashboard-crypto-icon">
+                                <i class="fab fa-bitcoin"></i>
+                              </div>
+                              Bitcoin
+                              <span class="dashboard-crypto-symbol">BTC</span>
+                            </div>
+                          </td>
+                          <td>$61,382.45</td>
+                          <td><span class="dashboard-price-change dashboard-price-change-up">+2.48%</span></td>
+                          <td>$1.21T</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="dashboard-crypto-name">
+                              <div class="dashboard-crypto-icon">
+                                <i class="fab fa-ethereum"></i>
+                              </div>
+                              Ethereum
+                              <span class="dashboard-crypto-symbol">ETH</span>
+                            </div>
+                          </td>
+                          <td>$3,405.67</td>
+                          <td><span class="dashboard-price-change dashboard-price-change-up">+1.87%</span></td>
+                          <td>$408.92B</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="dashboard-crypto-name">
+                              <div class="dashboard-crypto-icon">
+                                <i class="fas fa-coins"></i>
+                              </div>
+                              Binance Coin
+                              <span class="dashboard-crypto-symbol">BNB</span>
+                            </div>
+                          </td>
+                          <td>$586.32</td>
+                          <td><span class="dashboard-price-change dashboard-price-change-down">-0.34%</span></td>
+                          <td>$89.75B</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="dashboard-crypto-name">
+                              <div class="dashboard-crypto-icon">
+                                <i class="fas fa-rocket"></i>
+                              </div>
+                              Solana
+                              <span class="dashboard-crypto-symbol">SOL</span>
+                            </div>
+                          </td>
+                          <td>$142.18</td>
+                          <td><span class="dashboard-price-change dashboard-price-change-up">+5.26%</span></td>
+                          <td>$63.24B</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="dashboard-crypto-name">
+                              <div class="dashboard-crypto-icon">
+                                <i class="fas fa-paw"></i>
+                              </div>
+                              Dogecoin
+                              <span class="dashboard-crypto-symbol">DOGE</span>
+                            </div>
+                          </td>
+                          <td>$0.1289</td>
+                          <td><span class="dashboard-price-change dashboard-price-change-down">-1.52%</span></td>
+                          <td>$18.55B</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="dashboard-card">
+                  <div class="dashboard-card-header">
+                    <h2 class="dashboard-card-title">Price Chart (BTC)</h2>
+                    <div>
+                      <select id="timeframe-select" class="dashboard-timeframe-select">
+                        <option value="7">7D</option>
+                        <option value="30" selected>30D</option>
+                        <option value="90">90D</option>
+                        <option value="365">1Y</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="dashboard-card-content">
+                    <div class="dashboard-chart-container">
+                      <canvas id="price-chart"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dashboard-footer">
+                <p>Data provided by CoinGecko API • Updated every 5 minutes</p>
+                <p>© 2023 CryptoVision Dashboard • All rights reserved</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="row mt-5">
         <div class="col-lg-6 mb-4">
           <h3>The Shift I'm Enabling</h3>
@@ -631,6 +806,9 @@
   
   <!-- Chart.js Configuration -->
   <script src="js/chart-config.js"></script>
+  
+  <!-- Dashboard JavaScript -->
+  <script src="js/dashboard.js"></script>
 </body>
 
 </html>
