@@ -211,12 +211,15 @@
 
 /* Table Styling */
 .dashboard-table-wrapper {
-  width: 100%;
+  width: calc(100% + 40px); /* Extend beyond padding */
+  margin: 0 -20px; /* Negative margin to counteract card padding */
+  padding: 0 20px; /* Add padding back inside */
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
   scrollbar-width: thin;
   scrollbar-color: rgba(73, 103, 188, 0.3) transparent;
+  box-sizing: border-box;
 }
 
 /* Custom scrollbar styling */
@@ -411,7 +414,7 @@
 
   .dashboard-table {
     font-size: 12px;
-    min-width: 550px;
+    min-width: 450px;
   }
 
   .dashboard-table th,
@@ -420,7 +423,8 @@
   }
 
   .dashboard-table-wrapper {
-    margin: 0 -12px; /* Extend to edges for full scroll */
+    margin: 0 -16px; /* Extend to edges */
+    padding: 0 16px;
   }
 }
 
@@ -507,7 +511,7 @@
 
   .dashboard-table {
     font-size: 11px;
-    min-width: 500px;
+    min-width: 400px;
   }
 
   .dashboard-table th,
@@ -521,7 +525,7 @@
 
   .dashboard-table-wrapper {
     margin: 0 -12px; /* Extend to card edges */
-    padding: 0 4px; /* Small padding inside scroll area */
+    padding: 0 12px; /* Small padding inside scroll area */
   }
 
   .dashboard-chart-container {
@@ -584,6 +588,12 @@
 
   .dashboard-table {
     font-size: 10px;
+    min-width: 350px;
+  }
+
+  .dashboard-table-wrapper {
+    margin: 0 -12px;
+    padding: 0 12px;
   }
 
   .dashboard-chart-container {
