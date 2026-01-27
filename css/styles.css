@@ -114,11 +114,11 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(
+  /* background: linear-gradient(
     135deg,
     var(--clr-surface-a0) 0%,
     var(--clr-surface-tonal-a10) 100%
-  );
+  ); */
   position: relative;
   overflow: hidden;
   padding: 8rem 0 4rem 0;
