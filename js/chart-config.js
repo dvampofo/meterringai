@@ -75,6 +75,11 @@ document.addEventListener("DOMContentLoaded", function () {
       options: {
         maintainAspectRatio: false,
         responsive: true,
+        layout: {
+          padding: {
+            bottom: 80,
+          },
+        },
         plugins: {
           title: {
             display: true,
@@ -201,6 +206,36 @@ document.addEventListener("DOMContentLoaded", function () {
           },
         },
       },
+      plugins: [
+        {
+          // Responsive plugin for all mobile phones
+          id: "responsiveMobilePlugin",
+          resize(chart) {
+            const canvas = chart.canvas;
+            const ctx = canvas.getContext("2d");
+            const width = canvas.width;
+
+            // Detect phone screen and adjust dynamically
+            if (width < 480) {
+              // Small phones (< 480px)
+              chart.options.layout.padding.bottom = 70;
+              chart.options.plugins.title.font.size = 12;
+            } else if (width < 600) {
+              // Standard phones (480px - 599px)
+              chart.options.layout.padding.bottom = 75;
+              chart.options.plugins.title.font.size = 13;
+            } else if (width < 768) {
+              // Large phones landscape (600px - 767px)
+              chart.options.layout.padding.bottom = 80;
+              chart.options.plugins.title.font.size = 13;
+            } else {
+              // Tablets and larger
+              chart.options.layout.padding.bottom = 80;
+              chart.options.plugins.title.font.size = 14;
+            }
+          },
+        },
+      ],
     });
   }
 });

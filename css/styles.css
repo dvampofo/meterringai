@@ -1181,24 +1181,87 @@ button:focus {
 }
 
 /* Responsive Adjustments */
-@media (max-width: 992px) {
+
+/* Desktop and Large Screens (1200px+) */
+@media (min-width: 1200px) {
+  .chart-container {
+    min-height: 400px;
+    padding: 2rem;
+  }
+}
+
+/* Large Tablets and Small Desktops (992px - 1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
   .chart-container {
     min-height: 350px;
     padding: 1.5rem;
   }
 }
 
-@media (max-width: 768px) {
+/* Tablets (768px - 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
   .chart-container {
-    min-height: 300px;
+    min-height: 320px;
     padding: 1.25rem;
   }
 }
 
-@media (max-width: 576px) {
+/* Large Phones in Landscape (600px - 767px) */
+@media (max-width: 767px) and (min-width: 600px) {
   .chart-container {
-    min-height: 250px;
-    padding: 1rem;
+    min-height: 280px;
+    padding: 0.875rem;
+    overflow: hidden;
+  }
+
+  .chart-wrapper {
+    width: 100%;
+    height: auto;
+  }
+
+  .chart-container canvas {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Standard Phones (480px - 599px) - Most Common Mobile Phones */
+@media (max-width: 599px) and (min-width: 480px) {
+  .chart-container {
+    min-height: 260px;
+    padding: 0.625rem;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .chart-wrapper {
+    width: 100%;
+    height: auto;
+  }
+
+  .chart-container canvas {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Small Phones (< 480px) - iPhone SE, Older Small Phones */
+@media (max-width: 479px) {
+  .chart-container {
+    min-height: 240px;
+    padding: 0.5rem;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .chart-wrapper {
+    width: 100%;
+    height: auto;
+  }
+
+  .chart-container canvas {
+    max-width: 100%;
+    height: auto;
   }
 }
 
