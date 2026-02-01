@@ -1448,7 +1448,7 @@ button:focus {
 
   .chart-container {
     min-width: 100%;
-    min-height: 400px;
+    min-height: 500px;
   }
 }
 
@@ -1461,7 +1461,7 @@ button:focus {
 
   .chart-container {
     min-width: 100%;
-    min-height: 350px;
+    min-height: 450px;
   }
 }
 
@@ -1470,12 +1470,12 @@ button:focus {
   .chart-scroll-container {
     overflow-x: auto;
     padding: 1.25rem;
-    min-height: 320px;
+    min-height: 420px;
   }
 
   .chart-container {
     min-width: 800px;
-    min-height: 300px;
+    min-height: 400px;
   }
 }
 
@@ -1484,7 +1484,7 @@ button:focus {
   .chart-scroll-container {
     overflow-x: auto;
     padding: 1rem;
-    min-height: 320px;
+    min-height: 420px;
     box-sizing: border-box;
   }
 
@@ -1496,7 +1496,7 @@ button:focus {
 
   .chart-container {
     min-width: 700px;
-    min-height: 300px;
+    min-height: 400px;
   }
 
   .chart-container canvas {
@@ -1510,7 +1510,7 @@ button:focus {
   .chart-scroll-container {
     overflow-x: auto;
     padding: 0.75rem;
-    min-height: 300px;
+    min-height: 420px;
     box-sizing: border-box;
   }
 
@@ -1522,7 +1522,7 @@ button:focus {
 
   .chart-container {
     min-width: 600px;
-    min-height: 280px;
+    min-height: 400px;
   }
 
   .chart-container canvas {
@@ -1536,7 +1536,7 @@ button:focus {
   .chart-scroll-container {
     overflow-x: auto;
     padding: 0.75rem;
-    min-height: 320px;
+    min-height: 420px;
     box-sizing: border-box;
   }
 
@@ -1548,7 +1548,7 @@ button:focus {
 
   .chart-container {
     min-width: 550px;
-    min-height: 300px;
+    min-height: 400px;
   }
 
   .chart-container canvas {

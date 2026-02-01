@@ -187,21 +187,25 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             beginAtZero: true,
             max: 110,
-            grid: {
-              color: "rgba(63, 63, 63, 0.3)",
-              drawBorder: false,
-              drawTicks: false,
-            },
             ticks: {
               color: "#717171",
               font: {
                 family: "'Inter', sans-serif",
                 size: 12,
               },
-              padding: 8,
+              padding: 12,
+              stepSize: 10,
               callback: function (value) {
                 return "$" + value;
               },
+            },
+            grid: {
+              color: "rgba(63, 63, 63, 0.5)",
+              drawBorder: false,
+              drawTicks: true,
+              tickColor: "rgba(63, 63, 63, 0.5)",
+              tickLength: 8,
+              tickWidth: 1,
             },
           },
         },
