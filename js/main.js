@@ -9,16 +9,16 @@ document.addEventListener("DOMContentLoaded", function () {
   // ===================================
   const priceData = {
     starter: {
-      monthly: "$2000",
-      yearly: "$18000",
+      monthly: "$9",
+      yearly: "$81",
     },
     growth: {
-      monthly: "$2000",
-      yearly: "$18000",
+      monthly: "$29",
+      yearly: "$261",
     },
     enterprise: {
-      monthly: "$2000",
-      yearly: "$18000",
+      monthly: "$99",
+      yearly: "$891",
     },
   };
 
