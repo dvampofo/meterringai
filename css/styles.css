@@ -1006,6 +1006,28 @@ button:focus {
   font-weight: 500;
 }
 
+/* Price Details - Tokens and Overage */
+.price-details {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: rgba(71, 213, 166, 0.05);
+  border-left: 3px solid var(--clr-success-a10);
+  border-radius: 6px;
+}
+
+.included-tokens {
+  font-size: 0.9rem;
+  color: var(--clr-success-a10);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.overage-rate {
+  font-size: 0.85rem;
+  color: var(--clr-surface-a50);
+  margin: 0;
+}
+
 /* Plan Description */
 .plan-description {
   font-size: 0.95rem;
