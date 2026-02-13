@@ -1,6 +1,6 @@
 /**
  * Chart.js Configuration for LLM Pricing Comparison Chart
- * Shows cost comparison of major AI providers vs LiteLLM Gateway smart routing
+ * Shows cost comparison of major AI providers vs MeterRingAI smart routing
  * Data: Cost per 1M tokens (Input)
  */
 
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
           "Cohere\nCommand R+",
           "AWS\nTitanXL",
           "Average\nPaid Model",
-          "LiteLLM\nSmart Routing",
+          "MeterRingAI\nSmart Routing",
         ],
         datasets: [
           {
@@ -162,9 +162,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 family: "'Inter', sans-serif",
                 size: 11,
               },
-              // USE COLOR CALLBACK TO CHANGE LITELLM LABEL COLOR
+              // USE COLOR CALLBACK TO CHANGE METERRINGAI LABEL COLOR
               color: function (context) {
-                // If this is the last label (index 11 = LiteLLM)
+                // If this is the last label (index 11 = MeterRingAI)
                 if (context.index === 11) {
                   return LITELLM_LABEL_COLOR; // Use custom color
                 }

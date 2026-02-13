@@ -1,5 +1,5 @@
 /**
- * LiteLLM Gateway Landing Page - Main JavaScript
+ * MeterRingAI Landing Page - Main JavaScript
  * Handles smooth scrolling, button interactions, and pricing toggle
  */
 
@@ -194,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Console Welcome Message
   // ===================================
   console.log(
-    "%c👋 Welcome to LiteLLM Gateway!",
+    "%c👋 Welcome to MeterRingAI!",
     "color: #4967bc; font-size: 20px; font-weight: bold;",
   );
   console.log(

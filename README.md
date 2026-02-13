@@ -1,6 +1,6 @@
-# LiteLLM Gateway - Landing Page
+# MeterRingAI - Landing Page
 
-A responsive landing page for the LiteLLM Gateway project - an AI gateway that turns bloated subscriptions into lean, usage-based billing.
+A responsive landing page for the MeterRingAI project - an AI gateway that turns bloated subscriptions into lean, usage-based billing.
 
 ## 🚀 Live Demo
 
@@ -9,7 +9,7 @@ A responsive landing page for the LiteLLM Gateway project - an AI gateway that t
 ## 📁 Project Structure
 
 ```
-litellm-gateway-landing/
+MeterRingAI Landing/
 ├── index.html          # Main HTML file
 ├── css/
 │   ├── styles.css      # All custom styles
