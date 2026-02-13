@@ -19,10 +19,6 @@ MeterRingAI Landing/
 │   ├── chart-config.js
 │   ├── api-flow.js
 │   └── dashboard.js
-├── images/             # Screenshots and images
-│   ├── dashboard1.png
-│   ├── cost-chart.png
-│   └── architecture.png
 └── README.md           # Project documentation
 ```
 
