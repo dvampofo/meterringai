@@ -1,4 +1,4 @@
-# MeterRingAI - Landing Page
+# MeterRingAI - Landing Page Description
 
 A responsive landing page for the MeterRingAI project - an AI gateway that turns bloated subscriptions into lean, usage-based billing.
 
