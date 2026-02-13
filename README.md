@@ -4,7 +4,7 @@ A responsive landing page for the MeterRingAI project - an AI gateway that turns
 
 ## 🚀 Live Demo
 
-[View Live Site](https://dvampofo.github.io/litellmgatewaylanding/)
+[View Live Site](https://dvampofo.github.io/meterringai/)
 
 ## 📁 Project Structure
 
