@@ -184,7 +184,7 @@ body {
 
 .hero .lead {
   font-size: clamp(1.2rem, 2.5vw, 1.75rem);
-  color: var(--clr-surface-a50);
+  color: var(--clr-light-a0);
   margin-bottom: 3rem;
   line-height: 1.5;
   max-width: 600px;
